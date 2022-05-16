@@ -11,5 +11,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
 }
+let botonLogin = document.getElementById('#botonLogin');
+let collapseEvent = document.getElementById('#nb-toggler');
+  if (collapseEvent?.offsetWidth == 0) {
+    alert("aea mongol")
+  }
