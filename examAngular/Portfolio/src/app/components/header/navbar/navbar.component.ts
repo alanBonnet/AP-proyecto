@@ -13,8 +13,4 @@ export class NavbarComponent implements OnInit {
   }
   
 }
-let botonLogin = document.getElementById('#botonLogin');
-let collapseEvent = document.getElementById('#nb-toggler');
-  if (collapseEvent?.offsetWidth == 0) {
-    alert("aea mongol")
-  }
+

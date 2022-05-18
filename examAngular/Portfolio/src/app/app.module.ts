@@ -6,17 +6,35 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { NavbarComponent } from './components/header/navbar/navbar.component';
-
+import { BannerComponent } from './components/header/banner/banner.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { HysSkillsComponent } from './components/hys-skills/hys-skills.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    NavbarComponent
+    NavbarComponent,
+    BannerComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HysSkillsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      /*radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300
+      */
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

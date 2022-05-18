@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
+import { PerfilSvService } from 'src/app/services/perfil-sv.service';
 @Component({
   selector: 'app-body',
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.css']
 })
 export class BodyComponent implements OnInit {
-  perfilPhoto:string = "http://placeimg.com/2000/2000/any"; 
-  perfilBanner:string = "http://placeimg.com/2000/2000/any";
-  perfilNombre:string = "Alan Bonnet";
-  perfilAcercaDe:string = "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur cumque mollitia, odio impedit tempora voluptatum, eius optio fugit omnis consequuntur laboriosam?";
+  perfil:PerfilSvService = new PerfilSvService;
   constructor() { }
 
   ngOnInit(): void {
