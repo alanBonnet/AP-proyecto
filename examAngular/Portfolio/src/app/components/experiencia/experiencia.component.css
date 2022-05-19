@@ -5,3 +5,6 @@
     margin-left: .15rem !important;
     margin-right: .15rem !important;
 }
+.list-group-item{
+    border-left: 2px solid green !important;
+}
