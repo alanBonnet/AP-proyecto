@@ -14,7 +14,7 @@ import { HysSkillsComponent } from './components/hys-skills/hys-skills.component
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 
-
+import {HttpClientModule } from '@angular/common/http';
 
 /*Ng circle progress bar import*/
 @NgModule({
@@ -33,7 +33,8 @@ import { FooterComponent } from './components/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgCircleProgressModule.forRoot({})
+    NgCircleProgressModule.forRoot({}),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
