@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { emitDistinctChangesOnlyDefaultValue } from '@angular/compiler';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { perfil } from 'src/app/models/perfil.model';
 import { PerfilService } from 'src/app/services/perfil/perfil.service';
 
@@ -9,19 +10,19 @@ import { PerfilService } from 'src/app/services/perfil/perfil.service';
 })
 export class PerfilComponent implements OnInit {
   perfil:perfil = new perfil("","","","","","","","","","","");
-  edit : boolean = false;
+  edit:boolean = false;
   @Input () value :string = "";
   constructor(public perfilSv : PerfilService) { 
 
   }
-  editProfile(){
+  public editProfile():void{
     this.edit = !this.edit;
   }
   ngOnInit(): void {
     this.perfilSv.getPerfil().subscribe(data =>{this.perfil = data})
   }
-  public autoImgPhoto(){
-    return this.perfil.imgPhoto ==null? 'http://placeimg.com/2000/2000/any':this.perfil.imgPhoto;
+  public autoImgPhoto():any{
+    return this.perfil.imgPhoto ==null ? 'http://placeimg.com/2000/2000/any':this.perfil.imgPhoto;
   }
   
 }

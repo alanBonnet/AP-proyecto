@@ -9,6 +9,7 @@ import { PerfilService } from 'src/app/services/perfil/perfil.service';
 export class BannerComponent implements OnInit {
   //perfil : PerfilSvService= new PerfilSvService;
   perfil:perfil = new perfil("","","","","","","","","","","");
+  
   constructor(public perfilSv : PerfilService) { }
 
   ngOnInit(): void {

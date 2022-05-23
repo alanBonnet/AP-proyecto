@@ -8,6 +8,7 @@ import { perfil } from 'src/app/models/perfil.model';
 })
 export class PerfilService {
   URL = 'http://localhost:8080/user/perfil/';
+  edit : boolean = false;
   constructor(private http:HttpClient) { }
   public getPerfil(): Observable<perfil>{
     return this.http.get<perfil>(this.URL+'get')

@@ -10,24 +10,37 @@
           <span class="navbar-toggler-icon"></span>
       </button> -->
       <div class="collapse navbar-collapse" id="collapsibleNavId">
-          <ul class="navbar-nav ms-auto my-auto mt-lg-0">
-              <li class="nav-item active">
-                  <a class="nav-link my-auto" href="#">
-                    <i class="bi bi-instagram fs-1"></i>  
-                    <span class="visually-hidden">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-4" href="#">
-                    <i class="bi bi-facebook fs-1"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" id="botonLogin" class="nav-link-success btn btn-outline-success py-auto mt-2 mt-sm-3 mt-lg-4 mt-xl-4">
-                    Login
-                </a>
-            </li>
-          </ul>
-          
+        <ul class="navbar-nav ms-auto my-auto mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link my-auto" [href]="perfil.instragram" *ngIf="perfil.instragram.length > 15">
+              <i class="bi bi-instagram fs-1"></i>
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" [href]="perfil.facebook" *ngIf="perfil.facebook.length< 15">
+              <i class="bi bi-facebook fs-1"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" [href]="perfil.twitter" *ngIf="perfil.twitter.length > 15">
+              <i class="bi bi-twitter fs-1"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-4" [href]="perfil.linkedin" *ngIf="perfil.linkedin.length > 15">
+              <i class="bi bi-linkedin fs-1"></i>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" id="botonLogin"
+              class="nav-link-success btn btn-outline-success py-auto mt-2 mt-sm-3 mt-lg-4 mt-xl-4">
+              Login
+            </a>
+          </li>
+        </ul>
+
       </div>
 </div>
 </nav>
