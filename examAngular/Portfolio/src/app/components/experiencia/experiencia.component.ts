@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ExperienciaService } from 'src/app/services/experiencia.service';
+import { experience } from 'src/app/models/experience.mode';
+import { ExperienceService } from 'src/app/services/experience/experience.service';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -7,10 +9,19 @@ import { ExperienciaService } from 'src/app/services/experiencia.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
-  expe :ExperienciaService = new ExperienciaService;
-  constructor() { }
-
+  exp:experience = new experience("","","","");
+  exps:experience[]=[];
+  constructor(public ExpSv:ExperienceService) { }
+  
   ngOnInit(): void {
+    //this.ExpSv.getExperience().subscribe(data =>{ this.exp = data })
+    this.ExpSv.getExperiences().subscribe(data=>{this.exps=data} )
+    setTimeout(()=>{
+      console.log(this.exp)
+      console.log(this.exp.dateEnd)
+      console.log(this.exp.dateStart)
+      
+    },2000)
   }
-
+  
 }

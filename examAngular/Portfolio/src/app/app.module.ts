@@ -15,6 +15,7 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import {HttpClientModule } from '@angular/common/http';
+import { PerfilComponent } from './components/header/perfil/perfil.component';
 
 /*Ng circle progress bar import*/
 @NgModule({
@@ -28,7 +29,8 @@ import {HttpClientModule } from '@angular/common/http';
     EducacionComponent,
     HysSkillsComponent,
     ProyectoComponent,
-    FooterComponent
+    FooterComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,

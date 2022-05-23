@@ -12,4 +12,6 @@ export class PerfilService {
   public getPerfil(): Observable<perfil>{
     return this.http.get<perfil>(this.URL+'get')
   }
+
+  
 }

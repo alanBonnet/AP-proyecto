@@ -11,7 +11,7 @@ export class perfil {
     twitter: string;
     urlWeb: string;
     linkedin: string;
-    constructor(firstname: string,lastname: string,aboutMe: string="",profession: string="",imgPhoto: string="none",imgBanner: string="none",facebook: string="none",instragram: string="none",twitter: string="none",urlWeb: string="none",linkedin: string="none") {
+    constructor(firstname: string,lastname: string,aboutMe: string,profession: string,imgPhoto: string,imgBanner: string,facebook: string,instragram: string,twitter: string,urlWeb: string,linkedin: string) {
         this.firstname=firstname;
         this.lastname = lastname;
         this.aboutMe = aboutMe;

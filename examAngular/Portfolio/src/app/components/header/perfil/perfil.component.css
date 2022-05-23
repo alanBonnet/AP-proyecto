@@ -1,0 +1,66 @@
+
+.rounded-top-25px{
+    border-radius: 25px 25px 5px 5px;
+  }
+  .row{
+      padding: 20px !important;
+  }
+  .mxs-1{
+      margin-left: .15rem !important;
+      margin-right: .15rem !important;
+  }
+
+
+  /*mediaquery para foto perfil*/
+  @media (min-width:576px){
+      #perfilPhoto{
+          position: absolute;
+          width:15%;
+          box-shadow: 3px 3px 3px grey;
+          margin-top: -9.5%;
+          margin-left: 0%;
+      }
+      
+      
+  }
+  @media (min-width:576px) and (max-width:765px){
+      #perfilPhoto{
+          width: 25%;
+          margin-top: -19.5%;
+          margin-left: 2%;
+          
+      }
+  }
+  @media (min-width:1212px) and (max-width:1517px){
+      #perfilPhoto{
+  
+          width:20%;
+      }
+      
+  }
+  @media (min-width:1518px) and (max-width:1759px){
+      #perfilPhoto{
+          width: 18%;
+      }
+  }
+  @media (min-width:1760px) and (max-width:1992px){
+      #perfilPhoto{
+          width: 17%;
+      }
+  }
+  
+  @media (min-width:1993px){
+      #perfilPhoto{
+          width:15%;
+      }
+      
+  }
+  @media (max-width:575px){
+      #perfilPhoto{
+          width: 50%;
+          margin-top: -35.5%;
+          margin-left: 25%;
+          box-shadow: 3px 3px 3px grey;
+          margin-bottom: 1.5rem;
+      }
+  }
