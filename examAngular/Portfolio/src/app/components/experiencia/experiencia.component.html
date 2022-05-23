@@ -17,16 +17,19 @@
     </div>
 </div>-->
 <div class="container">
-    <div class="row bg-white mxs-1 border-top" *ngFor="let exp of exps">
-        <div class="col-lg-10">
-            <h1 class="card-title">
-                {{exp.position}}
-            </h1>
-            <p>{{exp.description}}</p>
-        </div>
-        <div class="col-lg-2">
-            <button type="button" class="btn btn-primary mx-auto">Editar</button>
-            
+    <div class="mxs-1 bg-white p-3">
+        <h1 class=" bg-white p-3">Experiencias</h1>
+        <div class="row  mxs-1 my-2 border-top border-2 " *ngFor="let exp of exps">
+            <div class="col-lg-10">
+                <h3 class="card-title">
+                    {{exp.position}}
+                </h3>
+                <p>{{exp.description}}</p>
+            </div>
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-primary mx-auto">Editar</button>
+                
+            </div>
         </div>
     </div>
 </div>

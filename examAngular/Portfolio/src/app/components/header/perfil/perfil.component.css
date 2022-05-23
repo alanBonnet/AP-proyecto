@@ -15,51 +15,53 @@
   @media (min-width:576px){
       #perfilPhoto{
           position: absolute;
-          width:15%;
+          width: 200px;
           box-shadow: 3px 3px 3px grey;
-          margin-top: -9.5%;
-          margin-left: 0%;
+          margin-top: -170px;
+          margin-left: 2em;
       }
       
       
   }
   @media (min-width:576px) and (max-width:765px){
       #perfilPhoto{
-          width: 25%;
-          margin-top: -19.5%;
-          margin-left: 2%;
+
+          margin-top: -160px;
+          margin-left: 8em;
           
       }
   }
   @media (min-width:1212px) and (max-width:1517px){
       #perfilPhoto{
-  
-          width:20%;
+        margin-top: -150px;
+        margin-left: 1em;
+        width: 260px;
       }
       
   }
   @media (min-width:1518px) and (max-width:1759px){
       #perfilPhoto{
-          width: 18%;
+        width: 270px;
       }
   }
   @media (min-width:1760px) and (max-width:1992px){
       #perfilPhoto{
-          width: 17%;
+        width: 280px;
       }
   }
   
   @media (min-width:1993px){
       #perfilPhoto{
-          width:15%;
+        width: 290px;
       }
       
   }
   @media (max-width:575px){
       #perfilPhoto{
-          width: 50%;
-          margin-top: -35.5%;
-          margin-left: 25%;
+          position: absolute;
+          width: 170px;
+          margin-top: -140px;
+          margin-left: auto;
           box-shadow: 3px 3px 3px grey;
           margin-bottom: 1.5rem;
       }
