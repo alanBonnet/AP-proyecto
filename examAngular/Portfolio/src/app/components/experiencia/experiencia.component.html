@@ -17,19 +17,53 @@
     </div>
 </div>-->
 <div class="container">
-    <div class="mxs-1 bg-white p-3">
-        <h1 class=" bg-white p-3">Experiencias</h1>
-        <div class="row  mxs-1 my-2 border-top border-2 " *ngFor="let exp of exps">
-            <div class="col-lg-10">
-                <h3 class="card-title">
-                    {{exp.position}}
-                </h3>
-                <p>{{exp.description}}</p>
-            </div>
-            <div class="col-lg-2">
-                <button type="button" class="btn btn-primary mx-auto">Editar</button>
-                
-            </div>
-        </div>
+  <div class="mxs-1 bg-white p-3">
+    <h1 class="bg-white p-3">Experiencias</h1>
+    <div class="row mxs-1 my-2 border-top border-2" *ngFor="let exp of exps">
+      <div class="col-lg-10 ">
+        <h3 *ngIf="!edit"   class="card-title">
+          {{ exp.position }}
+        </h3>
+        <input *ngIf="edit" [value]="exp.position"  type="text" name="" id="" class="form-control">
+        <p *ngIf="!edit" >{{ exp.description }}</p>
+        <textarea *ngIf="edit" [value]="exp.description"  class="form-control" name="" id=""></textarea>
+      </div>
+      <div class="col-lg-2">
+        <button
+          *ngIf="!edit"
+          (click)="editExperience()"
+          type="button"
+          class="btn btn-light mx-auto"
+          data-bs-placement="top"
+          data-bs-toggle="tooltip"
+          title="Edit"
+          
+        >
+          <i class="bi bi-pen text-dark"></i>
+        </button>
+        <button
+          *ngIf="edit"
+          (click)="editExperience()"
+          type="button"
+          class="btn btn-light mx-auto"
+          data-bs-placement="top"
+          data-bs-toggle="tooltip"
+          title="Save"
+        >
+          <i class="bi bi-check-square text-success"></i>
+        </button>
+        <button
+          *ngIf="edit"
+          (click)="editExperience()"
+          type="button"
+          class="btn btn-light mx-auto"
+          data-bs-placement="top"
+          data-bs-toggle="tooltip"
+          title="Cancel"
+        >
+          <i class="bi bi-x-lg text-danger "></i>
+        </button>
+      </div>
     </div>
+  </div>
 </div>

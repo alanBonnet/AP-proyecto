@@ -11,8 +11,10 @@ export class PerfilService {
   edit : boolean = false;
   constructor(private http:HttpClient) { }
   public getPerfil(): Observable<perfil>{
-    return this.http.get<perfil>(this.URL+'get')
+    return this.http.get<perfil>(this.URL+'get');
   }
-
+  public editPerfil(perfil : perfil):Observable<perfil>{
+    return this.http.put<perfil>(`${this.URL}/edit`,perfil);
+  }
   
 }

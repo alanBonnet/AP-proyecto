@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
 import { experience } from 'src/app/models/experience.mode';
 import { ExperienceService } from 'src/app/services/experience/experience.service';
 
@@ -10,18 +11,24 @@ import { ExperienceService } from 'src/app/services/experience/experience.servic
 })
 export class ExperienciaComponent implements OnInit {
   exp:experience = new experience("","","","");
-  exps:experience[]=[];
-  constructor(public ExpSv:ExperienceService) { }
+  public exps:experience[]=[];
+  edit:boolean = false;
+  constructor(private ExpSv:ExperienceService) { }
   
   ngOnInit(): void {
-    //this.ExpSv.getExperience().subscribe(data =>{ this.exp = data })
-    this.ExpSv.getExperiences().subscribe(data=>{this.exps=data} )
-    setTimeout(()=>{
-      console.log(this.exp)
-      console.log(this.exp.dateEnd)
-      console.log(this.exp.dateStart)
-      
-    },2000)
+    
+    this.getExperiences()
+  }
+  public editExperience():void{this.edit = !this.edit;}
+
+  public getExperiences():void{
+    this.ExpSv.getExperiences().subscribe({
+      next:(Response:experience[]) =>{
+        this.exps=Response;},
+        error:(error:HttpErrorResponse)=>{
+          alert(error.message)
+        }
+    })
   }
   
 }
