@@ -16,6 +16,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import {HttpClientModule } from '@angular/common/http';
 import { PerfilComponent } from './components/header/perfil/perfil.component';
+import { FormAddComponent } from './components/experiencia/form-add/form-add.component';
 
 /*Ng circle progress bar import*/
 @NgModule({
@@ -30,7 +31,8 @@ import { PerfilComponent } from './components/header/perfil/perfil.component';
     HysSkillsComponent,
     ProyectoComponent,
     FooterComponent,
-    PerfilComponent
+    PerfilComponent,
+    FormAddComponent
   ],
   imports: [
     BrowserModule,

@@ -12,6 +12,7 @@ import { ExperienceService } from 'src/app/services/experience/experience.servic
 export class ExperienciaComponent implements OnInit {
   exp:experience = new experience("","","","");
   public exps:experience[]=[];
+  public editExperiencia:experience | undefined;
   edit:boolean = false;
   constructor(private ExpSv:ExperienceService) { }
   
@@ -19,7 +20,7 @@ export class ExperienciaComponent implements OnInit {
     
     this.getExperiences()
   }
-  public editExperience():void{this.edit = !this.edit;}
+  public canEditExperience():void{this.edit = !this.edit;}
 
   public getExperiences():void{
     this.ExpSv.getExperiences().subscribe({
@@ -29,6 +30,14 @@ export class ExperienciaComponent implements OnInit {
           alert(error.message)
         }
     })
+  }
+  public addExperience(exp: experience){
+    this.ExpSv.addExperience(exp)
+    .subscribe(data=>{
+      console.log("se agrega con exito")
+      
+    })
+
   }
   
 }
