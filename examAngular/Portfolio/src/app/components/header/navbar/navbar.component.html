@@ -41,6 +41,7 @@
           </li>
           <li *ngIf="!isLogged" class="nav-item px-1">
             <a href="#" id="botonSingIn"
+              data-bs-toggle="modal" data-bs-target="#singIn"
               class="nav-link-success btn btn-outline-success py-auto mt-2 mt-sm-3 mt-lg-4 mt-xl-4">
               Sing In
             </a>
@@ -54,5 +55,26 @@
         </ul>
 
       </div>
+
 </div>
 </nav>
+
+<!-- Modals -->
+  <!-- signIn -->
+    <div class="modal fade" id="singIn" tabindex="-1" aria-labelledby="singInLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="singInLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <app-singin-form></app-singin-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- signIn fin -->
+
+
+<!-- Modals Fin -->

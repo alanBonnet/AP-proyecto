@@ -11,7 +11,8 @@ export class perfil {
     twitter: string;
     urlWeb: string;
     linkedin: string;
-    constructor(firstname: string,lastname: string,aboutMe: string,profession: string,imgPhoto: string,imgBanner: string,facebook: string,instragram: string,twitter: string,urlWeb: string,linkedin: string) {
+    canEdit:boolean;
+    constructor(firstname: string,lastname: string,aboutMe: string,profession: string,imgPhoto: string,imgBanner: string,facebook: string,instragram: string,twitter: string,urlWeb: string,linkedin: string, canEdit:boolean) {
         this.firstname=firstname;
         this.lastname = lastname;
         this.aboutMe = aboutMe;
@@ -23,5 +24,6 @@ export class perfil {
         this.twitter=twitter;
         this.urlWeb=urlWeb;
         this.linkedin=linkedin;
+        this.canEdit=canEdit;
     }
 }

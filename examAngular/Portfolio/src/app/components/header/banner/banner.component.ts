@@ -8,7 +8,7 @@ import { PerfilService } from 'src/app/services/perfil/perfil.service';
 })
 export class BannerComponent implements OnInit {
   //perfil : PerfilSvService= new PerfilSvService;
-  perfil:perfil = new perfil("","","","","","","","","","","");
+  perfil:perfil = new perfil("","","","","","","","","","","",false);
   claseImgBanner:string="visually-hidden"
   constructor(public perfilSv : PerfilService) { }
 

@@ -8,7 +8,7 @@ import { PerfilService } from 'src/app/services/perfil/perfil.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  perfil:perfil = new perfil("","","","","","","","","","","");
+  perfil:perfil = new perfil("","","","","","","","","","","",false);
   facebook:string = "";
   listSocial:string = "nav-item visually-hidden";
   classLiFb:string = this.listSocial;
@@ -31,6 +31,8 @@ export class NavbarComponent implements OnInit {
     }
     if ((this.perfil.instragram) != null){
       this.classLiIG = "nav-item"
+    }else{
+      this.perfil.instragram = "null";
     }
     if ((this.perfil.linkedin) != null){
       this.classLiLinkd = "nav-item"

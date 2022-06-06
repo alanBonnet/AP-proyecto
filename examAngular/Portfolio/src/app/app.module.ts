@@ -17,6 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClientModule } from '@angular/common/http';
 import { PerfilComponent } from './components/header/perfil/perfil.component';
 import { FormAddComponent } from './components/experiencia/form-add/form-add.component';
+import { SinginFormComponent } from './components/header/navbar/singin-form/singin-form.component';
+
 
 /*Ng circle progress bar import*/
 @NgModule({
@@ -32,7 +34,9 @@ import { FormAddComponent } from './components/experiencia/form-add/form-add.com
     ProyectoComponent,
     FooterComponent,
     PerfilComponent,
-    FormAddComponent
+    FormAddComponent,
+    SinginFormComponent,
+    
   ],
   imports: [
     BrowserModule,

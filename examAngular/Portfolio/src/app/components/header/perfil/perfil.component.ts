@@ -9,7 +9,7 @@ import { PerfilService } from 'src/app/services/perfil/perfil.service';
   styleUrls: ['./perfil.component.css']
 })
 export class PerfilComponent implements OnInit {
-  perfil:perfil = new perfil("","","","","","","","","","","");
+  perfil:perfil = new perfil("","","","","","","","","","","",false);
   editPerfil:perfil | undefined;
 
   edit:boolean = false;
@@ -19,11 +19,11 @@ export class PerfilComponent implements OnInit {
 
   }
   public editProfile():void{
-    this.edit = !this.edit;
+    this.perfil.canEdit = !this.perfil.canEdit
   }
   ngOnInit(): void {
     this.getPerfil();
-   
+    
     setTimeout(() => {
       this.claseImgPhoto = "img-fluid border border-white border-5 rounded-circle"
     }, 8000);
